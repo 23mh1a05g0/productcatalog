@@ -247,7 +247,7 @@ CI/CD integration
 
 👨‍💻 Author
 
-Developed as part of backend engineering training.
+Kalesha Vali Dokuparthi.
 
 🚀 Project Status
 
