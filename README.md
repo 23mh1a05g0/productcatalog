@@ -1,30 +1,22 @@
-📦 Product Catalog REST API
+### 📦 Product Catalog REST API
 
 A production-ready Spring Boot 3.x REST API for managing Products and Categories.
 
-This project demonstrates:
+## This project demonstrates:
 
 Clean layered architecture (Controller → Service → Repository)
-
 Spring Data JPA + Hibernate
-
 Entity relationships (Many-to-One)
-
 DTO pattern
-
 Validation
-
 Pagination
-
 Global exception handling
-
 PostgreSQL with Docker
-
 Multi-stage Docker build
 
 docker-compose setup
 
-🚀 Tech Stack
+## 🚀 Tech Stack
 Technology	Version
 Java	17
 Spring Boot	3.x
@@ -33,7 +25,9 @@ Hibernate	6.x
 PostgreSQL	15
 Docker	Latest
 Maven	3.9+
-📁 Project Structure
+
+## 📁 Project Structure
+
 productcatalog/
 │
 ├── src/main/java/com/example/productcatalog
@@ -52,7 +46,7 @@ productcatalog/
 ├── docker-compose.yml
 └── pom.xml
 
-🧠 Architecture Overview
+## 🧠 Architecture Overview
 Client
    ↓
 Controller (REST Endpoints)
@@ -63,7 +57,7 @@ Repository (JPA)
    ↓
 PostgreSQL Database
 
-🗂 Database Schema
+## 🗂 Database Schema
 Category Table
 Column	Type
 id	BIGINT
@@ -76,18 +70,18 @@ description	TEXT
 price	DECIMAL
 category_id	BIGINT (FK)
 
-Relationship:
+## Relationship:
 
 Product → ManyToOne → Category
 
-🌐 API Endpoints
+## 🌐 API Endpoints
 
 Base URL:
 
 http://localhost:8080
 
-📂 Category APIs
-➤ Create Category
+## 📂 Category APIs
+# ➤ Create Category
 POST /api/categories
 
 Request Body
@@ -95,20 +89,20 @@ Request Body
   "name": "Electronics"
 }
 
-➤ Get All Categories
+# ➤ Get All Categories
 GET /api/categories
 
-➤ Get Category By ID
+# ➤ Get Category By ID
 GET /api/categories/{id}
 
-➤ Update Category
+# ➤ Update Category
 PUT /api/categories/{id}
 
-➤ Delete Category
+# ➤ Delete Category
 DELETE /api/categories/{id}
 
-📦 Product APIs
-➤ Create Product
+## 📦 Product APIs
+# ➤ Create Product
 POST /api/products
 
 Request Body
@@ -119,22 +113,22 @@ Request Body
   "categoryId": 1
 }
 
-➤ Get All Products (Paginated)
+# ➤ Get All Products (Paginated)
 GET /api/products?page=0&size=10
 
-➤ Get Product By ID
+# ➤ Get Product By ID
 GET /api/products/{id}
 
-➤ Update Product
+# ➤ Update Product
 PUT /api/products/{id}
 
-➤ Delete Product
+# ➤ Delete Product
 DELETE /api/products/{id}
 
-🔍 Pagination Example
+## 🔍 Pagination Example
 GET /api/products?page=0&size=5
 
-🛡 Validation
+# 🛡 Validation
 
 @NotBlank
 
@@ -153,14 +147,14 @@ Example Error Response:
   "message": "Price must be positive"
 }
 
-🐳 Running with Docker
-1️⃣ Build & Run
+## 🐳 Running with Docker
+# 1️⃣ Build & Run
 docker-compose up --build
 
-2️⃣ Stop Containers
+# 2️⃣ Stop Containers
 docker-compose down
 
-🐘 PostgreSQL Configuration
+## 🐘 PostgreSQL Configuration
 
 docker-compose automatically starts:
 
@@ -174,7 +168,7 @@ SPRING_DATASOURCE_URL
 SPRING_DATASOURCE_USERNAME
 SPRING_DATASOURCE_PASSWORD
 
-🔥 Multi-Stage Docker Build
+## 🔥 Multi-Stage Docker Build
 
 The Dockerfile:
 
@@ -186,7 +180,7 @@ Creates lightweight runtime image
 
 Copies generated JAR
 
-🧪 Testing
+## 🧪 Testing
 
 Run locally:
 
@@ -206,7 +200,7 @@ Run:
 mvn spring-boot:run
 
 
-Access:
+### Access:
 
 http://localhost:8080
 
@@ -217,7 +211,7 @@ http://localhost:8080
 ✔ Avoided FetchType.EAGER
 ✔ Avoided Open Session in View
 
-🎯 Learning Outcomes
+## 🎯 Learning Outcomes
 
 Real-world Spring Boot backend development
 
@@ -231,7 +225,7 @@ Dockerizing Spring Boot apps
 
 Connecting to PostgreSQL container
 
-📌 Future Improvements
+## 📌 Future Improvements
 
 Swagger / OpenAPI documentation
 
@@ -245,7 +239,7 @@ Filtering APIs
 
 CI/CD integration
 
-👨‍💻 Author
+## 👨‍💻 Author
 
 Kalesha Vali Dokuparthi.
 
